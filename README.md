@@ -1,27 +1,34 @@
 # Cinemoon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
+Kompanija Cinemoon osnovana je 2002. godine i ima sediste u Srbiji. Poseduje 22 bioskopa sirom zemlje, kao i 5 u Crnoj Gori, 3 u Hrvatskoj i 2 u Italiji. 
 
-## Development server
+Kompanija je rasprostranjena na sledecim podrucjima: Beograd, Novi Sad, Subotica, Nis, Valjevo, Cacak, Uzice, Kraljevo, Kragujevac, Ivanjica, Sabac, Novi Pazar, Jagodina i Krusevac u Srbiji. Podgorica, Niksic i Bar u Crnoj Gori. Zagreb i Split u Hrvatskoj, a Rim i Napulj u Italiji.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Istorija kompanije
 
-## Code scaffolding
+Prvi Cinemoon bioskop otvoren je 2. juna 2002. u Beogradu. To je bio najmoderniji bioskop u regionu. Ubrzo nakon njega, 2004. godine otvoren je najveci Cinemoon bioskop u Novom Sadu koji ubrzo postaje najpopularnije mesto za izlazak.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Zbog velike potraznje i posecenosti polako pocinje otvaranje bioskopa sirom zemlje. 2007. otvaraju se bioskopi u Crnoj Gori i Hrvatskoj, a zatim 2010. i u Italiji kada kompanija Cinemoon postaje najrasprostranjenija kompanija svoje vrste.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Tehnologije
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Nasa kompanija poseduje aplikaciju pod istim nazivom Cinemoon koja je razvijena upotrebom frontend okruzenja Angular 18. Pored toga koriscene su sledece biblioteke:
 
-## Running end-to-end tests
+-  [Angular Material](https://material.angular.io/)
+-  [Sweet Alerts 2](https://sweetalert2.github.io/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Struktura aplikacije
 
-## Further help
+Izvorni kod aplikacije koristi standardnu strukturu Angular projekta bez `app.modules.ts` datoteke koja nije potrebna upravo od verzije 18. 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Prikaz svih direktorijuma:
+
+- `src/app` - Glavni direktorijum koji sadrzi sve komponente
+
+- `src/models` - Direktorijum u kome skladištimo definicije tipova/interfejsa potrebnih za brži razvoj aplikacije
+
+- `src/services` - Direktorijum koji sadrži definicije servisa neophodnih za rad aplikacije
+
+
