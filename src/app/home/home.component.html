@@ -1,0 +1,119 @@
+<div class="container">
+<mat-card class="example-card" appearance="outlined">
+    <img mat-card-image src="https://www.itendswithus.movie/images/synopsis_poster.jpg" alt="it ends with us">
+    <mat-card-content>  
+      <h3>Colleen Hoover's It Ends With Us</h3>
+      <h5>Pocetak prikazivanja: 08.08.2024.</h5>
+      <mat-list role="list">
+        <mat-list-item role="listitem">Trajanje filma: 131 minut </mat-list-item>
+        <mat-list-item role="listitem">Zanr: Romance/Drama </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button><i class="fa-solid fa-circle-info"></i> DETAILS</button>
+      <button mat-button><i class="fa-solid fa-circle-check"></i> BOOK NOW</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card" appearance="outlined">
+    <img mat-card-image src="https://s3.amazonaws.com/nightjarprod/content/uploads/sites/302/2024/08/26225426/l1175hgL5DoXnqeZQCcU3eZIdhX-scaled.jpg" alt="terrifier">
+    <mat-card-content>
+    <h3>Terrifier 3</h3>
+    <h5>Pocetak prikazivanja: 10.10.2024.</h5>
+    <mat-list role="list">
+        <mat-list-item role="listitem">Trajanje filma: 125 minuta </mat-list-item>
+        <mat-list-item role="listitem">Zanr: Horror/Crime </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button><i class="fa-solid fa-circle-info"></i> DETAILS</button>
+      <button mat-button><i class="fa-solid fa-circle-check"></i> BOOK NOW</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card" appearance="outlined">
+    <img mat-card-image src="https://m.media-amazon.com/images/M/MV5BODI4ZDFkMjMtNDhmOC00YzIzLWE5Y2YtNzAxOWUyNDc4YTU2XkEyXkFqcGc@._V1_.jpg" alt="smile">
+    <mat-card-content>
+    <h3>Smile</h3>
+    <h5>Pocetak prikazivanja: 10.10.2024.</h5>
+    <mat-list role="list">
+        <mat-list-item role="listitem">Trajanje filma: 175 minuta </mat-list-item>
+        <mat-list-item role="listitem">Zanr: Horror  </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button><i class="fa-solid fa-circle-info"></i> DETAILS</button>
+      <button mat-button><i class="fa-solid fa-circle-check"></i> BOOK NOW</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card" appearance="outlined">
+    <img mat-card-image src="https://m.media-amazon.com/images/M/MV5BZTkyMGFlNzMtMTljOC00ZDMyLWE5NWItMzVjMDZmNzA2Yjc2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="sonic">
+    <mat-card-content>
+    <h3>Sonic 3</h3>
+    <h5>Pocetak prikazivanja: 22.08.2024.</h5>
+    <mat-list role="list">
+        <mat-list-item role="listitem">Trajanje filma: 130 minuta</mat-list-item>
+        <mat-list-item role="listitem">Zanr: Action/Adventure </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button><i class="fa-solid fa-circle-info"></i> DETAILS</button>
+      <button mat-button><i class="fa-solid fa-circle-check"></i> BOOK NOW</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card" appearance="outlined">
+    <img mat-card-image src="https://s3proxygw.cineplexx.at/cms-live/asset/_default_upload_bucket/inside%20out%20rs%20446.jpg" alt="inmyhead">
+    <mat-card-content>
+    <h3>In My Head 2</h3>
+    <h5>Pocetak prikazivanja: 10.09.2024. </h5>
+    <mat-list role="list">
+        <mat-list-item role="listitem">Trajanje filma: 95 minuta  </mat-list-item>
+        <mat-list-item role="listitem">Zanr: Family/Comedy  </mat-list-item>
+      </mat-list>      
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button><i class="fa-solid fa-circle-info"></i> DETAILS</button>
+      <button mat-button><i class="fa-solid fa-circle-check"></i> BOOK NOW</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card" appearance="outlined">
+    <img mat-card-image src="https://slike1.blitz-cinestar.hr/Plakati/10.9.2024_11_19_31_Megalopolis556x800.jpg?preset=thumb-500" alt="megalopolis">
+    <mat-card-content>
+    <h3>Megalopolis</h3>
+    <h5>Pocetak prikazivanja: 26.09.2024. </h5> 
+    <mat-list role="list">
+        <mat-list-item role="listitem">Trajanje filma: 138 minuta</mat-list-item>
+        <mat-list-item role="listitem">Zanr: Sci-fi/Drama </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button><i class="fa-solid fa-circle-info"></i> DETAILS</button>
+      <button mat-button><i class="fa-solid fa-circle-check"></i> BOOK NOW</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<div *ngIf="filmovi" class="container search-container">
+<mat-card appearance="outlined" class="search-card">
+    <mat-card-content>
+        <h2>Pretrazi filmove:</h2>
+        <form class="search-form">
+            <mat-form-field class="search-field">
+                <mat-label>Izaberi film</mat-label>
+        <mat-select>
+        <mat-option [value]="fi" *ngFor="let fi of filmovi">{{fi}}</mat-option>
+         </mat-select>
+            </mat-form-field>
+
+                <mat-form-field class="search-field">
+                    <mat-label>Izaberi zanr</mat-label>
+            <mat-select>
+            <mat-option [value]="za" *ngFor="let za of zanrovi">{{za}}</mat-option>
+             </mat-select>
+                </mat-form-field>
+          </form>
+               <mat-card-actions>
+            <a mat-button [routerLink]="['/search/']"><i class="fa-solid fa-search"></i> SEARCH</a>
+          </mat-card-actions>
+    </mat-card-content>
+
+</mat-card>
+
+</div>
