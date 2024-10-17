@@ -1,0 +1,27 @@
+<div *ngIf="filmovi" class="container search-container">
+    <mat-card appearance="outlined" class="search-card">
+        <mat-card-content>
+            <h2>Pretrazi filmove:</h2>
+            <form class="search-form">
+                <mat-form-field class="search-field">
+                    <mat-label>Izaberi film</mat-label>
+            <mat-select>
+            <mat-option [value]="fi" *ngFor="let fi of filmovi">{{fi}}</mat-option>
+             </mat-select>
+                </mat-form-field>
+    
+                    <mat-form-field class="search-field">
+                        <mat-label>Izaberi zanr</mat-label>
+                <mat-select>
+                <mat-option [value]="za" *ngFor="let za of zanrovi">{{za}}</mat-option>
+                 </mat-select>
+                    </mat-form-field>
+              </form>
+                   <mat-card-actions>
+                <a mat-button [routerLink]="['/search/']"><i class="fa-solid fa-search"></i> SEARCH</a>
+              </mat-card-actions>
+        </mat-card-content>
+    
+    </mat-card>
+    
+    </div>

@@ -4,3 +4,46 @@ html, body { height: 100%; }
 body { margin: 0;
     background-color:#271B2C;
      font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+     .example-card {
+        margin-top: 50px;
+        justify-content: space-between;
+      width: 300px;
+      height: auto;
+      object-fit: cover;
+     
+      }
+     
+      p, h1, h2, h3{
+        color: white !important;
+        
+      }
+      h5 {
+        color: violet;
+      }
+      .container{
+        margin-top: 30px;
+       display: flex;
+       justify-content: center;
+       gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 50px;
+      text-align: center;
+       
+      }
+    mat-list {
+        color: white;
+    }
+    .search-card{
+        width: 850px;
+        text-align: center;
+       
+    }
+    .search-form {
+        display: flex;
+       justify-content: center;
+       gap: 5px;
+    }

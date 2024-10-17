@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { BioskopiComponent } from './bioskopi/bioskopi.component';
 import { EventsComponent } from './events/events.component';
 import { KlubComponent } from './klub/klub.component';
+import { SearchComponent } from './search/search.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -11,6 +12,7 @@ export const routes: Routes = [
     {path: 'bioskopi', component: BioskopiComponent},
     {path:'events', component: EventsComponent},
     {path:'klub', component: KlubComponent},
+   {path: 'search', component: SearchComponent},
     {path:'**', redirectTo:''}
 
 ];

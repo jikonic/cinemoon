@@ -9,13 +9,14 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { MovieModel } from '../models/movie.model';
 import { WebService } from '../services/web.service';
+import { DataService } from '../services/data.service';
+import { SearchContainerComponent } from "../search-container/search-container.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, HttpClientModule,RouterLink, NgFor, NgIf, MatListModule, MatInputModule,
-    MatSelectModule
-  ],
+  imports: [MatCardModule, MatButtonModule, HttpClientModule, RouterLink, NgFor, NgIf, MatListModule, MatInputModule,
+    MatSelectModule, SearchContainerComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
@@ -23,28 +24,26 @@ import { WebService } from '../services/web.service';
 
 export class HomeComponent implements OnInit{
 
-  private service : WebService
+  private webService : WebService
+  private dataService: DataService
   public recommended: MovieModel[]= []
   // public filmovi: string[]=[]
-  public filmovi: string[]= [
-    'It Ends With Us', 'Terrifier 3', 'Smile', 'Sonic 3', 'In My Head 2','Megalopolis', 'Grof Monte Kristo', 'The Garfield',
-    'Grozan ja 4', 'Young Hearts','Bad Boys: Ride or Die'
-  ]
+  public filmovi: string[]= []
   
-  public zanrovi: string [] = [
-    'Horror', 'Romance/Drama', 'Family/Comedy', 'Action/Adventure', 'Romance', 'Sci-fi', 'Sci-fi/Drama',
-    'Crime', 'Horror/Crime'
-  ]
+  public zanrovi: string [] = []
 
 
 constructor(private client : HttpClient){
-  this.service= new WebService()
+  this.webService= new WebService()
+  this.dataService= new DataService()
 
 }
 ngOnInit(): void {
 
-   this.service.getRecommendedFilms().subscribe(rsp => this.recommended = rsp.content)
-   this.service.getAvailableFilmovi().subscribe(rsp => this.filmovi = rsp)
-}
+   this.webService.getRecommendedFilms().subscribe(rsp => this.recommended = rsp.content)
+   this.webService.getAvailableFilmovi().subscribe(rsp => this.filmovi = rsp)
+  this.zanrovi= this.dataService.getZanrovi()
+  this.filmovi=this.dataService.getFilmovi()
+  }
 
 }
