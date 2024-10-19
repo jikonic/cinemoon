@@ -5,6 +5,7 @@ import { BioskopiComponent } from './bioskopi/bioskopi.component';
 import { EventsComponent } from './events/events.component';
 import { KlubComponent } from './klub/klub.component';
 import { SearchComponent } from './search/search.component';
+import { SignupComponent } from './signup/signup.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -13,6 +14,7 @@ export const routes: Routes = [
     {path:'events', component: EventsComponent},
     {path:'klub', component: KlubComponent},
    {path: 'search', component: SearchComponent},
+   {path: 'signup', component: SignupComponent},
     {path:'**', redirectTo:''}
 
 ];
