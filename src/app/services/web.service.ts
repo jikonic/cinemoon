@@ -23,6 +23,15 @@ public  getRecommendedFilms(){
       'Accept' : 'application/json'
     }
    })
+  }
+    public getFilmsByZanr(fil : string){
+    const url = `${this.baseUrl}/file:///D:/Desktop/film.xml/${fil}?page=0&size=30`
+    return  this.client.get<PageModel<MovieModel>>(url,{
+      headers: {
+        'Accept' : 'application/json'
+      }
+     })
+
 }
 public getAvailableFilmovi() {
   const url = `${this.baseUrl}/file:///D:/Desktop/film.xml`

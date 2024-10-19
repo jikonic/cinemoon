@@ -24,7 +24,7 @@ import { SearchContainerComponent } from "../search-container/search-container.c
 
 export class HomeComponent implements OnInit{
 
-  private webService : WebService
+  public webService : WebService
   private dataService: DataService
   public recommended: MovieModel[]= []
   // public filmovi: string[]=[]
