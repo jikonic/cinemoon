@@ -7,7 +7,12 @@
   <a routerLink="/klub" mat-button>Klub</a>
   <a routerLink="/about" mat-button>About</a>
   <a routerLink="/search" mat-button>Search</a>
-
+  <a routerLink="/login" mat-button *ngIf="userService.hasCurrentUser(); else profile">Login</a>
+  <a routerLink="/profile" mat-button><i class="fa-solid fa-circle-user"></i> </a>
 </mat-toolbar>
 
 <router-outlet />
+
+<ng-template #profile>
+  <a routerLink="/profile" mat-button>Login</a>
+</ng-template>
