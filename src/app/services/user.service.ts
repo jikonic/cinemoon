@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { UserModel } from "../models/user.model";
+import { ReviewModel } from "../models/review.model";
 
 
 
@@ -25,7 +26,10 @@ return this.instance
                 email: 'jikonic2002@gmail.com',
                 name: 'Jasmina',
                 password: 'jikonic',
-                booked: [123]
+                booked: [{
+                    id: 123,
+                    review: ReviewModel.NONE
+            }]
             }
             localStorage.setItem('users', JSON.stringify([defaultUser]))
             json = localStorage.getItem('users')

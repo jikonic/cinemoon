@@ -52,6 +52,7 @@ if (this.password == '') return
   name: this.name,
   password:this.password,
   booked: []
+  
  })
 }catch (e){
   alert(e)

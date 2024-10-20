@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatButton } from '@angular/material/button';
+import { MatCard, MatCardActions } from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 
 export interface Events {
@@ -21,12 +23,13 @@ const ELEMENT_DATA: Events[] = [
 @Component({
   selector: 'app-events',
   standalone: true,
-  imports: [MatTableModule],
+  imports:[MatCardActions,MatCard,MatTableModule, MatButton],
   templateUrl: './events.component.html',
   styleUrl: './events.component.css'
 })
 export class EventsComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol', 'projekcija'];
   dataSource = ELEMENT_DATA;
+
 
 }

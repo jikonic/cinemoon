@@ -6,17 +6,22 @@ import { MatButtonModule } from '@angular/material/button';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { UserModel } from '../models/user.model';
 import { from } from 'rxjs';
+import { MatTableModule } from '@angular/material/table';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
-  imports: [NgIf,JsonPipe, MatCardModule, MatButtonModule, RouterLink],
+  imports: [MatTableModule,NgIf,JsonPipe, MatCardModule, MatButtonModule, RouterLink],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent implements OnInit {
   private userService: UserService
   public active: UserModel | null = null
+
+  
+//   public displayedColumns: string[] = ['position', 'data', 'weight','symbol'];
+//  public dataSource= []
 
 constructor(private router: Router, private route: ActivatedRoute){
   this.userService= UserService.getInstance()
@@ -72,7 +77,6 @@ public doChangePassword(){
   }
 });
 }
-
 }
 
 
