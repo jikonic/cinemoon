@@ -3,6 +3,8 @@ import { MatButton } from '@angular/material/button';
 import { MatCard, MatCardActions } from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 
+
+
 export interface Events {
   film: string;
   position: number;
@@ -33,3 +35,6 @@ export class EventsComponent {
 
 
 }
+
+
+
