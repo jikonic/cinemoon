@@ -12,10 +12,12 @@ import { WebService } from '../services/web.service';
 import { DataService } from '../services/data.service';
 import { SearchContainerComponent } from "../search-container/search-container.component";
 import swal from 'sweetalert2';
+import { MatIcon } from '@angular/material/icon';
+import { MatTab, MatTabGroup, MatTabLabel } from '@angular/material/tabs';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, HttpClientModule, RouterLink, NgFor, NgIf, MatListModule, MatInputModule,
+  imports: [MatTabLabel,MatTabGroup,MatTab,MatIcon,MatCardModule, MatButtonModule, HttpClientModule, RouterLink, NgFor, NgIf, MatListModule, MatInputModule,
     MatSelectModule, SearchContainerComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './home.component.html',
@@ -64,3 +66,4 @@ ngOnInit(): void {
 
 
 }
+export class TabGroupCustomLabelExample {}
